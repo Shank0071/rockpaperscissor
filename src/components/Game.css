@@ -1,0 +1,42 @@
+.Game {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Game img {
+    margin-top: 3rem;
+    width: 17rem;
+}
+
+.Game .rock,
+.Game .scissors,
+.Game .paper {
+    position: absolute;
+    width: 7rem;
+    background-color: white; 
+    padding: 1rem;
+    
+}
+
+.Game .rock {
+    bottom: 0;
+    border-radius: 50%;
+    border: 10px solid red;
+}
+
+.Game .scissors {
+    left: 44rem;
+    top: -3rem;
+    border-radius: 50%;
+    border: 10px solid orange;
+}
+
+.Game .paper {
+    top: -3rem;
+    left: 28rem;
+    border-radius: 50%;
+    border: 10px solid blue;
+}
+

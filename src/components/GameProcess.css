@@ -1,0 +1,74 @@
+.GameProcess {
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+  gap: 20rem;
+  margin: 0 auto;
+  color: white;
+}
+
+.GameProcess .userPick,
+.GameProcess .housePick {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.GameProcess .userPick img,
+.GameProcess .housePick img {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  object-fit: contain;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.GameProcess
+  .userPick
+  img[alt="/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg"],
+.GameProcess
+  .housePick
+  img[alt="/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg"] {
+  border: 10px solid orange;
+}
+
+.GameProcess
+  .userPick
+  img[alt="/static/media/icon-paper.8b57a6b108c1b8ae82931a39b10f96a2.svg"],
+.GameProcess
+  .housePick
+  img[alt="/static/media/icon-paper.8b57a6b108c1b8ae82931a39b10f96a2.svg"] {
+  border: 10px solid blue;
+}
+
+.GameProcess
+  .userPick
+  img[alt="/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg"],
+.GameProcess
+  .housePick
+  img[alt="/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg"] {
+  border: 10px solid red;
+}
+
+
+.GameProcess .winOrLose {
+    display: block;
+    margin: auto auto;
+    text-align: center;
+}
+
+.GameProcess .winOrLose button {
+    margin-top: 1rem;
+    border: none;
+    padding: 1rem 2rem;
+    color: red;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.GameProcess .winOrLose button:hover {
+    transform: scale(1.01);
+}

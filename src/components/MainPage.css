@@ -1,0 +1,28 @@
+.MainPage .header {
+    width: 50%;
+    margin: 2rem auto;
+    border: 2px solid gray;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+}
+
+.MainPage .header h2 {
+    color: white;
+}
+
+.MainPage .score {
+    background-color: white;
+    padding: 1rem 3rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.MainPage .score small {
+    color: blue;
+}
+
+.MainPage .score h1 {
+    font-size: 40px;
+}
