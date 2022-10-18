@@ -2,30 +2,33 @@ import './App.css';
 import MainPage from './components/MainPage';
 import Game from './components/Game';
 import GameProcess from './components/GameProcess';
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 
 
 function App() {
   const [userChoice, setUserChoice] = useState(null)
-  const [score, setScore] = useState(0)
+  const score = useRef(0)
 
-  const handleClick = (e) => {
-      setUserChoice(e.target.alt)
-  }
-  
-  const scoreInc = useCallback(
+  const incScore = useCallback(() => {
+    score.current++
+  }, [score])
+
+
+
+  const handleUserChoice = useCallback(
     () => {
-      setScore(score => score + 1)
-    },
-    [],
+      setUserChoice(null)
+    },[]
   )
+
+  
+  
   
 
-  console.log(userChoice)
   return (
     <div className="App">
-      <MainPage score={score}/>
-      {!userChoice ? <Game userChoice={userChoice} handleClick={handleClick}/> : <GameProcess userChoice={userChoice} setUserChoice={setUserChoice} scoreInc={scoreInc} />}
+      <MainPage score={score.current}/>
+      {!userChoice ? <Game userChoice={userChoice} setUserChoice={setUserChoice}/> : <GameProcess userChoice={userChoice} handleUserChoice={handleUserChoice} incScore={incScore} />}
     </div>
   );
 }

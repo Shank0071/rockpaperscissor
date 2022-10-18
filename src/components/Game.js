@@ -6,7 +6,11 @@ import paper from '../images/icon-paper.svg'
 
 
 
-export default function Game({handleClick}) {
+export default function Game({setUserChoice}) {
+
+  const handleClick = (e) => {
+    setUserChoice(e.target.alt)
+}
 
   return (
     <div className='Game'>
