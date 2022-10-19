@@ -2,7 +2,7 @@ import "./GameProcess.css";
 import scissors from "../images/icon-scissors.svg";
 import rock from "../images/icon-rock.svg";
 import paper from "../images/icon-paper.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function GameProcess({
   userChoice,
@@ -10,7 +10,7 @@ export default function GameProcess({
   incScore,
 }) {
   const [src1, setSrc1] = useState(null);
-  const arr1 = [scissors, rock, paper];
+  const arr1 = useMemo(() => [scissors, rock, paper], []);
   const [randNum, setRandNum] = useState(0);
   // const randNum = 2
   const [winOrLose, setWinORLose] = useState(null);
@@ -58,7 +58,7 @@ export default function GameProcess({
     ) {
       setWinORLose("Draw");
     }
-  }, [randNum, src1, incScore, randNum]);
+  }, [randNum, src1, incScore, arr1]);
 
   console.log(winOrLose);
   return (
