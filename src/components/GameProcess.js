@@ -8,6 +8,7 @@ export default function GameProcess({
   userChoice,
   handleUserChoice,
   incScore,
+  score,
 }) {
   const [src1, setSrc1] = useState(null);
   const arr1 = useMemo(() => [scissors, rock, paper], []);
@@ -22,8 +23,8 @@ export default function GameProcess({
   // console.log(randNum)
 
   useEffect(() => {
-    setRandNum(Math.floor(Math.random() * 3))
-  }, [userChoice])
+    setRandNum(Math.floor(Math.random() * 3));
+  }, [userChoice]);
 
   useEffect(() => {
     if (userChoice === "paper") {
@@ -59,6 +60,9 @@ export default function GameProcess({
       setWinORLose("Draw");
     }
   }, [randNum, src1, incScore, arr1]);
+
+  document.querySelector(".score h1").innerHTML = score.current;
+
 
   console.log(winOrLose);
   return (

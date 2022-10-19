@@ -2,6 +2,8 @@ import './MainPage.css'
 
 
 export default function MainPage({ score }) {
+
+
   return (
     <div className='MainPage'>
         <div className="header">

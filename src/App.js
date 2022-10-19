@@ -9,6 +9,7 @@ function App() {
   const [userChoice, setUserChoice] = useState(null)
   const score = useRef(0)
 
+
   const incScore = useCallback(() => {
     score.current++
   }, [score])
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <MainPage score={score.current}/>
-      {!userChoice ? <Game userChoice={userChoice} setUserChoice={setUserChoice}/> : <GameProcess userChoice={userChoice} handleUserChoice={handleUserChoice} incScore={incScore} />}
+      {!userChoice ? <Game userChoice={userChoice} setUserChoice={setUserChoice}/> : <GameProcess userChoice={userChoice} handleUserChoice={handleUserChoice} incScore={incScore} score={score} />}
     </div>
   );
 }
