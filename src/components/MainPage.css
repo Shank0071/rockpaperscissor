@@ -26,3 +26,22 @@
 .MainPage .score h1 {
     font-size: 40px;
 }
+
+@media (max-width: 560px) {
+
+    .MainPage .header {
+        align-items: center;
+    }
+
+    .MainPage .score {
+        background-color: white;
+        padding: 1rem 1rem;
+        text-align: center;
+        border-radius: 1rem;
+    }
+
+    .MainPage .header h2 {
+        font-size: 16px;
+    }
+
+}

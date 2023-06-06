@@ -1,5 +1,6 @@
 .Game {
-    width: 100%;
+    width: max-content;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     position: relative;
@@ -27,7 +28,7 @@
 }
 
 .Game .scissors {
-    left: 44rem;
+    left: -1rem;
     top: -3rem;
     border-radius: 50%;
     border: 10px solid orange;
@@ -35,7 +36,7 @@
 
 .Game .paper {
     top: -3rem;
-    left: 28rem;
+    right: -1rem;
     border-radius: 50%;
     border: 10px solid blue;
 }
